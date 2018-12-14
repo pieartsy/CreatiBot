@@ -13,7 +13,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
         print("Ready!!!!!")
-
+        await client.change_presence(game=discord.Game(name='$palette for random palette!'))
 @client.event
 async def on_message(message):
         if message.content.startswith('$palette'):
