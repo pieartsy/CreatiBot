@@ -13,7 +13,6 @@ from reportlab.graphics import renderPDF, renderPM
 from PIL import Image
 #discord bot time!
 import discord
-import asyncio
 
 
 #grabs a random color palette from colormind.io
@@ -76,7 +75,7 @@ for number in range(5):
 palette.save(os.path.join(filepath, "palette.png"))
 
 
-TOKEN = "517436219089747978"
+TOKEN = "NTE3NDM2MjE5MDg5NzQ3OTc4.DvWmHQ.8N4FbC-Bmwjqc377Aw0rK43075U"
 client = discord.Client()
 
 @client.event
@@ -85,7 +84,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-        if message.content.startswith('!test'):
-                await client.send_file(channel, os.path.join(filepath, "palette.png"))
+        if message.content.startswith('$palette'):
+                await client.send_file(message.channel, os.path.join(filepath, "palette.png"))
 
 client.run(TOKEN)
