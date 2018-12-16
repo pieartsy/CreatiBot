@@ -36,7 +36,7 @@ def palettegen():
                         colorURLs.append("http://thecolorapi.com/id?rgb=rgb" + value + "&format=svg")
 
         #where to store the files
-        filepath = "C:\\Users\\Maddie\\Pictures\\palettes"
+        filepath = os.getcwd()
         filenames = []
 
         #for every color in the colorURLs list, grab the info from the URL using requests

@@ -3,11 +3,10 @@ import discord
 #imports the palette info
 import palette
 import os.path
+from config import TOKEN
 
-filepath = "C:\\Users\\Maddie\\Pictures\\palettes"
+filepath = os.getcwd()
 
-#old token, the new one has been regenerated and is not on git
-TOKEN = ""
 client = discord.Client()
 
 @client.event
