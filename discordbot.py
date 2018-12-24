@@ -4,9 +4,11 @@ import discord
 import palette
 import prompts
 #to join paths
-import os.path
+import os
 #discord bot token
-from config import TOKEN
+
+#discord bot token
+TOKEN = os.environ.get('TOKEN')
 
 #defines filepath again
 filepath = os.getcwd()

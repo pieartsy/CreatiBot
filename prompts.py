@@ -5,6 +5,15 @@ from config import REDDIT_ID, REDDIT_SECRET, REDDIT_PWD, REDDIT_USERNAME
 #to choose from a random prompt
 import random
 
+import os
+
+#reddit bot id, secret, and username and password for my account
+REDDIT_ID = os.environ.get('REDDIT_ID')
+REDDIT_SECRET = os.environ.get('REDDIT_SECRET')
+REDDIT_PWD = os.environ.get('REDDIT_PWD')
+REDDIT_USERNAME = os.environ.get('REDDIT_USERNAME')
+
+
 def promptgen():
     #reddit instance
     reddit = praw.Reddit(client_id= REDDIT_ID,
