@@ -32,14 +32,17 @@ async def on_message(message):
         if message.content.startswith('$palette'):
                 palette.palettegen()
                 await client.send_file(message.channel, os.path.join(filepath, "palette.png"))
+                print("Palette sent!!!!!")
 #on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel
 #where command was sent
         if message.content.startswith('$prompt'):
                 prompt = prompts.promptgen()
                 await client.send_message(message.channel, prompt)
+                print("Prompt sent!!!!!")
 #on message $help, gives help_instructions
         if message.content.startswith('$help'):
                 await client.send_message(message.channel, help_instructions)
+                print("Help sent!!!!!")
 
 #runs the bot
 client.run(TOKEN)
