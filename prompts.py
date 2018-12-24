@@ -1,7 +1,5 @@
 #python reddit api wrapper
 import praw
-#imports stuff to interact with reddit api
-from config import REDDIT_ID, REDDIT_SECRET, REDDIT_PWD, REDDIT_USERNAME
 #to choose from a random prompt
 import random
 
