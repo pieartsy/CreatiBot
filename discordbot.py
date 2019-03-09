@@ -24,24 +24,25 @@ help_instructions = "- $palette to generate a random palette from colormind.io\n
 @client.event
 async def on_ready():
         print("Ready!!!!!")
-        await client.change_presence(game=discord.Game(name='$help for bot help'))
+        game = discord.Game("$help for bot help")
+        await client.change_presence(status=discord.Status.idle, activity=game)
 #on message $palette, runs palettegen() from the palette.py file, and sends the image to the channel
 #where command was sent
 @client.event
 async def on_message(message):
         if message.content.startswith('$palette'):
                 palette.palettegen()
-                await client.send(os.path.join(filepath, "palette.png"))
+                await message.channel.send(os.path.join(filepath, "palette.png"))
                 print("Palette sent!!!!!")
 #on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel
 #where command was sent
         if message.content.startswith('$prompt'):
                 prompt = prompts.promptgen()
-                await client.send(prompt)
+                await message.channel.send(prompt)
                 print("Prompt sent!!!!!")
 #on message $help, gives help_instructions
         if message.content.startswith('$help'):
-                await client.send(help_instructions)
+                await message.channel.send(help_instructions)
                 print("Help sent!!!!!")
 
 #runs the bot
