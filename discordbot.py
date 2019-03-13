@@ -21,7 +21,7 @@ filepath = os.getcwd()
 client = discord.Client()
 
 #help instructions
-help_instructions = "- $palette to generate a random palette from colormind.io\n- $prompt to get a random prompt (out of the newest 50) from r/writingprompts\n- $saveprompt to input a user prompt (just type your whole prompt after the command) \n- $getprompt to get a user prompt"
+help_instructions = "- $palette to generate a random palette from colormind.io (broken currently)\n- $prompt to get a random prompt (out of the newest 50) from r/writingprompts\n- $saveprompt to input a user prompt (just type your whole prompt after the command) \n- $getprompt to get a user prompt"
 
 #when bot boots up, print "Ready!!!!!" to the command line
 #the playing status is "$help for both help
@@ -33,11 +33,11 @@ async def on_ready():
         
 #on message $palette, runs palettegen() from the palette.py file, and sends the image to the channel
 #where command was sent
-@bot.command()
-async def palette(ctx):
-    palette.palettegen()
-    await ctx.send(os.path.join(filepath, "palette.png"))
-    print("Palette sent!!!!!")
+#@bot.command()
+#async def palette(ctx):
+ #   palettegenerator.palettegen()
+  #  await ctx.send(os.path.join(filepath, "palette.png"))
+   # print("Palette sent!!!!!")
 
 #on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel
 #where command was sent
