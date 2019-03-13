@@ -8,7 +8,7 @@ scope = ['https://spreadsheets.google.com/feeds',
     'https://www.googleapis.com/auth/drive'
 ]
 
-credentials = ServiceAccountCredentials.from_json_keyfile_dict(json.dumps(os.environ.get("GOOGLE_API_CREDS")), scope)
+credentials = ServiceAccountCredentials.from_json(json.dumps(os.environ.get("GOOGLE_API_CREDS")), scope)
 
 gc = gspread.authorize(credentials)
 
