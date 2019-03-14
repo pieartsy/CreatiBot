@@ -58,10 +58,12 @@ async def info(ctx):
 async def saveprompt(ctx, *, content: str):
     userprompts.saveprompt(content)
     await ctx.send("Prompt, '" + content + "' saved!")
+    print("Userprompt saved!")
 
 @bot.command()
 async def getprompt(ctx):
     await ctx.send(userprompts.getprompt())
+    print("Userprompt sent!")
 
 #runs the bot
 bot.run(TOKEN)

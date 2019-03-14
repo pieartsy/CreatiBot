@@ -12,7 +12,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(os.env
 
 gc = gspread.authorize(credentials)
 
-wks = gc.open("creatibot prompts").sheet1
+wks = gc.open_by_key("1q7W_S13YCDtw8_2VoLdJ683kmkNRiDIv6KD6cGhi7d4").sheet1
 
 def saveprompt(arg):
     row = [arg]
