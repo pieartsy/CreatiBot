@@ -11,7 +11,7 @@ scope = ['https://spreadsheets.google.com/feeds',
 credentials = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(os.environ.get("GOOGLE_API_CREDS")), scope)
 
 gc = gspread.authorize(credentials)
-
+gc.login()
 wks = gc.open_by_key("1q7W_S13YCDtw8_2VoLdJ683kmkNRiDIv6KD6cGhi7d4").sheet1
 
 def saveprompt(arg):
