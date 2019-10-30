@@ -9,3 +9,4 @@ Pillow==6.2.1
 discord==1.0.1
 protobuf==3.10.0
 google_api_python_client==1.7.11
+asyncio-3.4.3
