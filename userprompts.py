@@ -1,5 +1,7 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
 import random
 import json
 import os
@@ -7,8 +9,9 @@ import os
 scope = ['https://spreadsheets.google.com/feeds',
     'https://www.googleapis.com/auth/drive'
 ]
-
-credentials = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(os.environ.get("GOOGLE_API_CREDS")), scope)
+# Use the client_secret.json file to identify the application requesting
+# authorization. The client ID (from that file) and access scopes are required.
+credentials = google_auth_oauthlib.flow.Flow.from_client_secrets_file(json.loads(os.environ.get("GOOGLE_API_CREDS")), scope)
 
 gc = gspread.authorize(credentials)
 gc.login()
