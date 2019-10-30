@@ -11,7 +11,7 @@ scope = ['https://spreadsheets.google.com/feeds',
 ]
 # Use the client_secret.json file to identify the application requesting
 # authorization. The client ID (from that file) and access scopes are required.
-credentials = google_auth_oauthlib.flow.Flow.from_client_secrets_file(json.loads(os.environ.get("GOOGLE_API_CREDS")), scope)
+credentials = google_auth_oauthlib.flow.Flow.from_client_config(json.loads(os.environ.get("GOOGLE_API_CREDS")), scope)
 
 gc = gspread.authorize(credentials)
 gc.login()
