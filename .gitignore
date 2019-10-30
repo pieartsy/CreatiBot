@@ -1,4 +1,3 @@
 config.py
 /__pycache__/*
 credentials.json
-userprompts.py
