@@ -1,0 +1,11 @@
+reportlab==3.5.13
+svglib==0.9.0
+gspread==3.1.0
+praw==6.1.1
+discord.py==0.16.12
+requests==2.22.0
+google_auth_oauthlib==0.4.1
+Pillow==6.2.1
+discord==1.0.1
+protobuf==3.10.0
+google_api_python_client==1.7.11
