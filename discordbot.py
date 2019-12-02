@@ -36,7 +36,7 @@ async def on_ready():
 @bot.command()
 async def palette(ctx):
     palettegenerator.palettegen()
-    await ctx.send(os.path.join(filepath, "palette.png"))
+    await ctx.send(file=discord.File(os.path.join(filepath, "palette.png")))
     print("Palette sent!!!!!")
 
 #on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel
