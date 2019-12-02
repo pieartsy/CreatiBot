@@ -21,7 +21,7 @@ filepath = os.getcwd()
 client = discord.Client()
 
 #help instructions
-help_instructions = "- $palette to generate a random palette from colormind.io\n- $prompt to get a random prompt (out of the newest 50) from r/writingprompts\n- $saveprompt to input a user prompt (just type your whole prompt after the command) \n- $getprompt to get a user prompt (broken currently)"
+help_instructions = "- $palette to generate a random palette from colormind.io\n- $prompt to get a random prompt (out of the newest 50) from r/writingprompt"
 
 #when bot boots up, print "Ready!!!!!" to the command line
 #the playing status is "$help for both help
