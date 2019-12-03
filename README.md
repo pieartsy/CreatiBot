@@ -27,4 +27,4 @@ This one's far quicker and simpler. When the user types `$prompt`, all it does i
 
 ![](https://github.com/pieartsy/CreatiBot/blob/master/prompt.gif)
 
-![](https://github.com/pieartsy/CreatiBot/blob/master/prompts.png
+![](https://github.com/pieartsy/CreatiBot/blob/master/prompts.png)
