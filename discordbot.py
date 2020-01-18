@@ -35,7 +35,11 @@ async def on_ready():
 #where command was sent
 @bot.command()
 async def palette(ctx):
-    palettegenerator.palettegen()
+    print("Trying to send palette...")
+    try:
+        palettegenerator.palettegen()
+    except:
+        print("Couldn't send palette! :(")
     await ctx.send(file=discord.File(os.path.join(filepath, "palette.png")))
     print("Palette sent!!!!!")
 

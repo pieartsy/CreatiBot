@@ -18,9 +18,14 @@ def palettegen():
         paletteURL = "http://colormind.io/api/"
         data = '{"model": "default"}'
 
-        #finagling to turn the result from a response to a dictionary to a list
+        #returns <Response [200]> from colormind
         paletteResponse = requests.get(paletteURL, data=data)
+        print(paletteResponse)
+        #returns json result
+        #ex: {'result': [[252, 238, 8], [212, 209, 72], [223, 151, 55], [232, 69, 18], [203, 31, 21]]}
         paletteDict = paletteResponse.json()
+        #finagling to turn the result from a response to a dictionary to a list
+        #ex: [[[196, 185, 84], [198, 206, 178], [91, 168, 124], [34, 110, 132], [16, 50, 85]]]
         paletteList = list(paletteDict.values())
         print(paletteList)
         #gonna collect the color URLs from thecolorapi.com
@@ -33,8 +38,9 @@ def palettegen():
                 for value in values:
                         #turns [n, n, n] to (n,n,n)
                         value ="(" + re.sub('[\[\]]', '',  str(value)) + ")"
+                        value = value.replace(' ', '')
+                        print(value)
                         colorURLs.append("http://thecolorapi.com/id?rgb=rgb" + value + "&format=svg")
-                        print(colorURLs)
         #where to store the files
         filepath = os.getcwd()
         filenames = []
@@ -73,3 +79,5 @@ def palettegen():
 
         #saves palette as palette.png
         palette.save(os.path.join(filepath, "palette.png"))
+
+palettegen()
