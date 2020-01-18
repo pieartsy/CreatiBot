@@ -11,6 +11,8 @@ from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPDF, renderPM
 #to stitch together images
 from PIL import Image
+#error handler to let me know what's wrong with my code!!
+import traceback
 
 
 def palettegen():
@@ -48,7 +50,12 @@ def palettegen():
         #for every color in the colorURLs list, grab the info from the URL using requests
         for number in range(5):
                 response = requests.get(colorURLs[number])
-                print(response)
+                #for some reason the last response doesn't work sometimes?? time to find out why
+                try:
+                        print(response)
+                except:
+                        traceback.print_exc()
+                        print("NOPE")
                 #if response is good
                 if response.status_code == 200:
                         #append a filename to filenames.
