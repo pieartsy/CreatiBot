@@ -45,7 +45,7 @@ async def palette(ctx):
     except:
         traceback.print_exc()
         print("Couldn't send palette! :(")
-        await channel.send("Couldn't send palette :pensive:")
+        await ctx.send("Couldn't send palette :pensive:")
     
 
 #on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel
