@@ -51,11 +51,12 @@ def palettegen():
         for number in range(5):
                 response = requests.get(colorURLs[number])
                 #for some reason the last response doesn't work sometimes?? time to find out why
-                try:
-                        print(response)
-                except:
-                        traceback.print_exc()
-                        print("NOPE")
+                for r in response:
+                        try:
+                                print(r)
+                        except:
+                                traceback.print_exc()
+                                print("NOPE")
                 #if response is good
                 if response.status_code == 200:
                         #append a filename to filenames.
