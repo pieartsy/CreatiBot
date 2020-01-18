@@ -10,6 +10,8 @@ import os
 from discord.ext import commands
 #defines command as $
 bot = commands.Bot(command_prefix='$')
+#error handler to let me know what's wrong with my code!!
+import traceback
 
 #discord bot token
 TOKEN = os.environ.get('TOKEN')
@@ -42,6 +44,7 @@ async def palette(ctx):
         print("Palette sent!!!!!")
     except:
         print("Couldn't send palette! :(")
+        traceback.print_exc()
     
 
 #on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel

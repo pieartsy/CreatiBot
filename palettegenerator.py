@@ -48,8 +48,6 @@ def palettegen():
         #for every color in the colorURLs list, grab the info from the URL using requests
         for number in range(5):
                 response = requests.get(colorURLs[number])
-                print(response)
-                print(response.content)
                 #if response is good
                 if response.status_code == 200:
                         #append a filename to filenames.
