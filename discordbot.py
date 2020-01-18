@@ -43,8 +43,8 @@ async def palette(ctx):
         await ctx.send(file=discord.File(os.path.join(filepath, "palette.png")))
         print("Palette sent!!!!!")
     except:
-        print("Couldn't send palette! :(")
         traceback.print_exc()
+        print("Couldn't send palette! :(")
     
 
 #on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel
