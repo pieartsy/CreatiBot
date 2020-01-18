@@ -22,7 +22,7 @@ def palettegen():
         paletteResponse = requests.get(paletteURL, data=data)
         paletteDict = paletteResponse.json()
         paletteList = list(paletteDict.values())
-
+        print(paletteList)
         #gonna collect the color URLs from thecolorapi.com
         colorURLs = []
 
@@ -34,7 +34,7 @@ def palettegen():
                         #turns [n, n, n] to (n,n,n)
                         value ="(" + re.sub('[\[\]]', '',  str(value)) + ")"
                         colorURLs.append("http://thecolorapi.com/id?rgb=rgb" + value + "&format=svg")
-
+                        print(colorURLs)
         #where to store the files
         filepath = os.getcwd()
         filenames = []

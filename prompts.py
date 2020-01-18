@@ -26,7 +26,7 @@ def promptgen():
     #newest 50 writing prompts
     new50prompts = []
 
-    #for submission in the Writing Prompts flair
+    #for submission in the Writing Prompts flair, get list of prompts, stripping [WP] from the front
     for submission in subreddit.search('flair:"Writing Prompt"', limit=50):
         new50prompts.append(submission.title.replace("[WP]", ''))
 
