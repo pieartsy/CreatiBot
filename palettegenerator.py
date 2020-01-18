@@ -86,5 +86,3 @@ def palettegen():
 
         #saves palette as palette.png
         palette.save(os.path.join(filepath, "palette.png"))
-
-palettegen()
