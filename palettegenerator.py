@@ -20,7 +20,6 @@ def palettegen():
 
         #returns <Response [200]> from colormind
         paletteResponse = requests.get(paletteURL, data=data)
-        print(paletteResponse)
         #returns json result
         #ex: {'result': [[252, 238, 8], [212, 209, 72], [223, 151, 55], [232, 69, 18], [203, 31, 21]]}
         paletteDict = paletteResponse.json()
@@ -41,6 +40,7 @@ def palettegen():
                         value = value.replace(' ', '')
                         print(value)
                         colorURLs.append("http://thecolorapi.com/id?rgb=rgb" + value + "&format=svg")
+                        print(colorURLs)
         #where to store the files
         filepath = os.getcwd()
         filenames = []
@@ -48,7 +48,8 @@ def palettegen():
         #for every color in the colorURLs list, grab the info from the URL using requests
         for number in range(5):
                 response = requests.get(colorURLs[number])
-                
+                print(response)
+                print(response.content)
                 #if response is good
                 if response.status_code == 200:
                         #append a filename to filenames.
@@ -79,5 +80,3 @@ def palettegen():
 
         #saves palette as palette.png
         palette.save(os.path.join(filepath, "palette.png"))
-
-palettegen()
