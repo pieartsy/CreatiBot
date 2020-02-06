@@ -7,7 +7,7 @@ It also uses [reddit's API](https://www.reddit.com/dev/api) for the random promp
 
 * $palette to generate a random palette from colormind.io
 * $prompt to get a random prompt (out of the newest 50) from r/writingprompts
-![](https://github.com/pieartsy/CreatiBot/info.png)
+![](https://github.com/pieartsy/CreatiBot/blob/master/info.png)
 
 ## Palette process
 1. User types `$palette` into the discord channel.
