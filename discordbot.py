@@ -16,6 +16,7 @@ import traceback
 #discord bot token
 TOKEN = os.environ.get('TOKEN')
 
+
 #defines filepath again
 filepath = os.getcwd()
 
@@ -23,7 +24,7 @@ filepath = os.getcwd()
 client = discord.Client()
 
 #help instructions
-help_instructions = "- $palette to generate a random palette from colormind.io\n- $prompt to get a random prompt (out of the newest 50) from r/writingprompt"
+help_instructions = "- $palette to generate a random palette from colormind.io"#\n- $prompt to get a random prompt (out of the newest 50) from r/writingprompt"
 
 #when bot boots up, print "Ready!!!!!" to the command line
 #the playing status is "$help for both help
@@ -48,13 +49,13 @@ async def palette(ctx):
         await ctx.send("Couldn't send palette :pensive:")
     
 
-#on message $prompt, runs promptgen from the prompts.py file and sends the prompt the channel
+#on message $prompt, runs promptgen from the prompts.py file and sends the prompt to the channel
 #where command was sent
-@bot.command()
-async def prompt(ctx):
-    prompt = prompts.promptgen()
-    await ctx.send(prompt)
-    print("Prompt sent!!!!!")
+#@bot.command()
+#async def prompt(ctx):
+ #   prompt = prompts.promptgen()
+  #  await ctx.send(prompt)
+   # print("Prompt sent!!!!!")
 
 #on message $help, gives help_instructions
 @bot.command()

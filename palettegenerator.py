@@ -41,7 +41,7 @@ def palettegen():
                         value ="(" + re.sub('[\[\]]', '',  str(value)) + ")"
                         value = value.replace(' ', '')
                         print(value)
-                        colorURLs.append("http://thecolorapi.com/id?rgb=rgb" + value + "&format=svg")
+                        colorURLs.append("https://www.thecolorapi.com/id?rgb=rgb" + value + "&format=svg")
                         print(colorURLs)
         #where to store the files
         filepath = os.getcwd()
