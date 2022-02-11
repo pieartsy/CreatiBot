@@ -1,9 +1,9 @@
 # CreatiBot
-A Discord bot that generates random palettes and gets random prompts.
+A Discord bot that generates random palettes. It used to generate random prompts before Reddit's API guidelines and verification process got a helluva lot stricter!
 
 For palette generation, it uses [colormind.io](http://colormind.io/api/)'s API, [thecolorapi.com](https://www.thecolorapi.com/), and [Pillow](https://python-pillow.org/) to create palettes and send them to the channel you've typed the command into.
 
-It also uses [reddit's API](https://www.reddit.com/dev/api) for the random prompts.
+It also used [reddit's API](https://www.reddit.com/dev/api) for the random prompts.
 
 * $palette to generate a random palette from colormind.io
 * $prompt to get a random prompt (out of the newest 50) from r/writingprompts
@@ -23,8 +23,8 @@ This process takes a few seconds!
 
 ![](https://github.com/pieartsy/CreatiBot/blob/master/palettes.png)
 
-## Prompt process
-This one's far quicker and simpler. When the user types `$prompt`, all it does is make a list out of the newest 50 writing prompts from [r/writingprompts](https://www.reddit.com/r/WritingPrompts/) and sends one of them to the channel.
+## Prompt process \[removed\]
+This one was far quicker and simpler. When the user types `$prompt`, all it does is make a list out of the newest 50 writing prompts from [r/writingprompts](https://www.reddit.com/r/WritingPrompts/) and sends one of them to the channel.
 
 ![](https://github.com/pieartsy/CreatiBot/blob/master/prompt.gif)
 
