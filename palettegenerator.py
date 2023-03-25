@@ -8,7 +8,7 @@ import re
 import os.path
 #to convert svg to png
 from svglib.svglib import svg2rlg
-from reportlab.graphics import renderPDF, renderPM
+from reportlab.graphics import renderPM
 #to stitch together images
 from PIL import Image
 #error handler to let me know what's wrong with my code!!
